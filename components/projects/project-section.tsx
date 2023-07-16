@@ -59,7 +59,11 @@ const ProjectSection = () => {
                   </CardContent>
                   <div className="flex flex-col justify-between">
                     <CardHeader className="gap-4">
-                      <CardTitle>{item.name}</CardTitle>
+                      <CardTitle>
+                        <a href={item.link} target="_blank">
+                          {item.name}
+                        </a>
+                      </CardTitle>
                       <CardDescription>{item.description}</CardDescription>
                       <div className="flex flex-wrap gap-3 text-xs">
                         {item.tags.map((tag) => (
@@ -75,10 +79,7 @@ const ProjectSection = () => {
                           <Github />
                         </a>
                       </Button>
-                      <Button
-                        size={"icon"}
-                        className="bg-yellow-500"
-                      >
+                      <Button size={"icon"} className="bg-yellow-500">
                         <a href={item.link} target="_blank">
                           <Link />
                         </a>
