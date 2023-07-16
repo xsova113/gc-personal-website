@@ -41,31 +41,9 @@ export const projects = [
     link: "https://insure-landing-page-xsova113.vercel.app/",
   },
   {
-    name: "Metaverse Madness",
-    description:
-      "Beaufitul and animated design of the metaverse web page that immerse the user into a metaversus experience.",
-    image: "/images/metaversus.png",
-    github: "https://github.com/xsova113/metaversus",
-    tags: [
-      {
-        name: "react",
-        color: "skyblue",
-      },
-      {
-        name: "framer-motion",
-        color: "violet",
-      },
-      {
-        name: "tailwind",
-        color: "blue",
-      },
-    ],
-    link: "https://metaversus-ejr621ney-xsova113.vercel.app/",
-  },
-  {
     name: "Ecommerce-Store 1",
     description: "Fully mobile responsive single website for ecommerce store.",
-    image: "/images/sneaker-ecom2.png",
+    image: "/images/sneaker_ecom.png",
     github: "https://github.com/xsova113/ecommerce-product-page",
     tags: [
       {
@@ -86,7 +64,7 @@ export const projects = [
   {
     name: "Ecommerce-Store 2",
     description: "Fully mobile responsive single website for ecommerce store.",
-    image: "/images/ecom-store-2.png",
+    image: "/images/ecom_store_2.png",
     github: "https://github.com/xsova113/ecommerce-store",
     tags: [
       {
@@ -103,6 +81,28 @@ export const projects = [
       },
     ],
     link: "https://ecommerce-store-xsova113.vercel.app/",
+  },
+  {
+    name: "Metaverse Madness",
+    description:
+      "Beaufitul and animated design of the metaverse web page that immerse the user into a metaversus experience.",
+    image: "/images/metaversus.png",
+    github: "https://github.com/xsova113/metaversus",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "framer-motion",
+        color: "violet",
+      },
+      {
+        name: "tailwind",
+        color: "blue",
+      },
+    ],
+    link: "https://metaversus-ejr621ney-xsova113.vercel.app/",
   },
   {
     name: "Dalle-2.0",

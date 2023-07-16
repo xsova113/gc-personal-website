@@ -45,7 +45,7 @@ const ProjectSection = () => {
                       alt={"image"}
                       fill
                       loading="lazy"
-                      className="object-cover sm:rounded-l-lg max-sm:rounded-t-lg bg-gradient-to-br from-slate-500 to-slate-900 hover:scale-110 hover:rotate-2 transition cursor-pointer"
+                      className="object-cover sm:rounded-l-lg max-sm:rounded-t-lg bg-slate-100 dark:bg-slate-800 hover:scale-110 hover:rotate-2 transition cursor-pointer"
                       onClick={() => router.push(item.link)}
                     />
                   </CardContent>
