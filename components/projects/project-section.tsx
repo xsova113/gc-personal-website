@@ -46,6 +46,7 @@ const ProjectSection = () => {
                       src={item.image}
                       alt={"image"}
                       fill
+                      loading="lazy"
                       className="object-cover rounded-2xl hover:scale-110 hover:rotate-2 transition cursor-pointer p-3"
                       onClick={() => router.push(item.link)}
                     />
