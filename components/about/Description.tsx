@@ -7,7 +7,7 @@ const Description = () => {
   return (
     <div className="grid md:grid-cols-2 gap-20">
       <motion.p
-        variants={fadeIn("right", "easeIn", 0.5, 0.5)}
+        variants={fadeIn("right", "easeIn", 0.2, 0.5)}
         initial="hidden"
         whileInView={"show"}
         className="text-muted-foreground"

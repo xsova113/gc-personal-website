@@ -17,7 +17,7 @@ import { Github, Link } from "lucide-react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { cardVariants } from "@/lib/motion";
+import { cardVariants, slideIn } from "@/lib/motion";
 
 const ProjectSection = () => {
   const router = useRouter();
@@ -27,7 +27,14 @@ const ProjectSection = () => {
     <section id="projects">
       <Container className="mt-32 md:mt-40 flex mx-auto">
         <div className={"flex flex-col gap-y-10"}>
-          <SectionHeader number={2} title={"projects"} />
+          <motion.div
+            variants={slideIn("left", "spring", 0.2, 1.5)}
+            initial="hidden"
+            whileInView={"show"}
+          >
+            <SectionHeader number={2} title={"projects"} />
+          </motion.div>
+
           {projects.slice(0, number).map((item) => {
             return (
               <motion.div
