@@ -19,7 +19,7 @@ export const projects = [
     description:
       "Fully functional admin dashboard CMS website for managing contents for ecommerce site.",
     image: "/images/cms_dashboard.png",
-    github: "https://github.com/xsova113/insure-landing-page",
+    github: "https://github.com/xsova113/ecommerce-admin",
     tags: [
       {
         name: "react",
@@ -38,7 +38,7 @@ export const projects = [
         color: "violet",
       },
     ],
-    link: "https://insure-landing-page-xsova113.vercel.app/",
+    link: "https://ecommerce-admin-xsova113.vercel.app/",
   },
   {
     name: "Ecommerce-Store 1",

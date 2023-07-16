@@ -47,14 +47,15 @@ const ProjectSection = () => {
               >
                 <Card className="flex md:flex-row flex-col justify-between drop-shadow-md dark:bg-black bg-white">
                   <CardContent className="w-full overflow-hidden max-md:h-72 md:max-w-[300px] lg:max-w-[450px] relative">
-                    <Image
-                      src={item.image}
-                      alt={"image"}
-                      fill
-                      loading="lazy"
-                      className="object-cover sm:rounded-l-lg max-sm:rounded-t-lg bg-slate-100 dark:bg-slate-800 hover:scale-110 hover:rotate-2 transition cursor-pointer"
-                      onClick={() => router.push(item.link)}
-                    />
+                    <a href={item.link} target="_blank">
+                      <Image
+                        src={item.image}
+                        alt={"image"}
+                        fill
+                        loading="lazy"
+                        className="object-cover sm:rounded-l-lg max-sm:rounded-t-lg bg-slate-100 dark:bg-slate-800 hover:scale-110 hover:rotate-2 transition cursor-pointer"
+                      />
+                    </a>
                   </CardContent>
                   <div className="flex flex-col justify-between">
                     <CardHeader className="gap-4">
@@ -69,18 +70,18 @@ const ProjectSection = () => {
                       </div>
                     </CardHeader>
                     <CardFooter className="gap-4">
-                      <Button
-                        onClick={() => router.push(item.github)}
-                        size={"icon"}
-                      >
-                        <Github />
+                      <Button size={"icon"}>
+                        <a href={item.github} target="_blank">
+                          <Github />
+                        </a>
                       </Button>
                       <Button
                         size={"icon"}
-                        onClick={() => router.push(item.link)}
                         className="bg-yellow-500"
                       >
-                        <Link />
+                        <a href={item.link} target="_blank">
+                          <Link />
+                        </a>
                       </Button>
                     </CardFooter>
                   </div>
