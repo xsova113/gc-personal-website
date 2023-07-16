@@ -60,7 +60,7 @@ const ProjectSection = () => {
                   <div className="flex flex-col justify-between">
                     <CardHeader className="gap-4">
                       <CardTitle>
-                        <a href={item.link} target="_blank">
+                        <a href={item.link} target="_blank" className="hover:underline">
                           {item.name}
                         </a>
                       </CardTitle>
