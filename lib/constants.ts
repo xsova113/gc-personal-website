@@ -18,7 +18,7 @@ export const projects = [
     name: "CMS admin dashboard",
     description:
       "Fully functional admin dashboard CMS website for managing contents for ecommerce site.",
-    image: "/images/cms-dashboard.png",
+    image: "/images/cms_dashboard.png",
     github: "https://github.com/xsova113/insure-landing-page",
     tags: [
       {

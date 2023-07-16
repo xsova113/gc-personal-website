@@ -38,16 +38,14 @@ const ProjectSection = () => {
                 viewport={{ once: true }}
                 className="grid gap-4"
               >
-                <Card
-                  className="flex md:flex-row flex-col justify-between drop-shadow-md dark:bg-black bg-white"
-                >
-                  <CardContent className="lg:max-w-[500px] md:max-w-[300px] w-full overflow-hidden lg:h-72 md:h-44 h-40 relative">
+                <Card className="flex md:flex-row flex-col justify-between drop-shadow-md dark:bg-black bg-white">
+                  <CardContent className="w-full overflow-hidden max-md:h-72 md:max-w-[300px] lg:max-w-[450px] relative">
                     <Image
                       src={item.image}
                       alt={"image"}
                       fill
                       loading="lazy"
-                      className="object-cover rounded-2xl hover:scale-110 hover:rotate-2 transition cursor-pointer p-3"
+                      className="object-cover sm:rounded-l-lg max-sm:rounded-t-lg bg-gradient-to-br from-slate-500 to-slate-900 hover:scale-110 hover:rotate-2 transition cursor-pointer"
                       onClick={() => router.push(item.link)}
                     />
                   </CardContent>
@@ -57,7 +55,9 @@ const ProjectSection = () => {
                       <CardDescription>{item.description}</CardDescription>
                       <div className="flex flex-wrap gap-3 text-xs">
                         {item.tags.map((tag) => (
-                          <span key={tag.name} style={{ color: tag.color }}>#{tag.name}</span>
+                          <span key={tag.name} style={{ color: tag.color }}>
+                            #{tag.name}
+                          </span>
                         ))}
                       </div>
                     </CardHeader>
