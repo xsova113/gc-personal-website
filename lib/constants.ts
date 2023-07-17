@@ -18,7 +18,7 @@ export const projects = [
     name: "CMS admin dashboard",
     description:
       "Fully functional admin dashboard CMS website for managing contents for ecommerce site.",
-    image: "/images/cms_dashboard.png",
+    image: "/images/cms-dashboardv2.png",
     github: "https://github.com/xsova113/ecommerce-admin",
     tags: [
       {
@@ -43,7 +43,7 @@ export const projects = [
   {
     name: "Ecommerce-Store 1",
     description: "Fully mobile responsive single website for ecommerce store.",
-    image: "/images/sneaker_ecom.png",
+    image: "/images/sneaker-ecom-store.png",
     github: "https://github.com/xsova113/ecommerce-product-page",
     tags: [
       {
@@ -64,7 +64,7 @@ export const projects = [
   {
     name: "Ecommerce-Store 2",
     description: "Fully mobile responsive single website for ecommerce store.",
-    image: "/images/ecom_store_2.png",
+    image: "/images/ecom-storev2.png",
     github: "https://github.com/xsova113/ecommerce-store",
     tags: [
       {
