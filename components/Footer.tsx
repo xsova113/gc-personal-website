@@ -19,28 +19,28 @@ const Footer = () => {
             <Link
               href={"https://github.com/xsova113"}
               target="_blank"
-              className="text-muted-foreground hover:text-white hover:-translate-y-1 transition"
+              className="text-muted-foreground hover:-translate-y-1 transition"
             >
               <Github />
             </Link>
             <Link
               href={"https://www.instagram.com/georgeclife/"}
               target="_blank"
-              className="text-muted-foreground hover:text-white hover:-translate-y-1 transition"
+              className="text-muted-foreground hover:-translate-y-1 transition"
             >
               <Instagram />
             </Link>
             <Link
               href={"https://www.linkedin.com/in/george-chang-h/"}
               target="_blank"
-              className="text-muted-foreground hover:text-white hover:-translate-y-1 transition"
+              className="text-muted-foreground hover:-translate-y-1 transition"
             >
               <Linkedin />
             </Link>
             <Link
               href={"https://www.facebook.com/george.chang.392"}
               target="_blank"
-              className="text-muted-foreground hover:text-white hover:-translate-y-1 transition"
+              className="text-muted-foreground hover:-translate-y-1 transition"
             >
               <Facebook />
             </Link>
