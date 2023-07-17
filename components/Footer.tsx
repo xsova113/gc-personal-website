@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <Container className="bg-slate-50 dark:bg-slate-900 mt-0 pt-20">
+      <Container className="dark:bg-black bg-white mt-0 pt-20">
         <Separator />
         <div className="flex sm:flex-row flex-col max-sm:items-center max-sm:gap-y-4 py-8">
           <span className="flex-1 text-sm text-muted-foreground">

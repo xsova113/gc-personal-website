@@ -15,12 +15,10 @@ import {
 import Image from "next/image";
 import { Github, Link } from "lucide-react";
 import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { cardVariants, slideIn } from "@/lib/motion";
 
 const ProjectSection = () => {
-  const router = useRouter();
   const [number, setNumber] = useState(4);
 
   return (
@@ -45,7 +43,7 @@ const ProjectSection = () => {
                 viewport={{ once: true }}
                 className="grid gap-4"
               >
-                <Card className="flex md:flex-row flex-col justify-between drop-shadow-md dark:bg-black bg-white">
+                <Card className="flex md:flex-row flex-col justify-between drop-shadow-md dark:bg-slate-900 bg-white">
                   <CardContent className="w-full overflow-hidden max-md:h-72 md:max-w-[300px] lg:max-w-[450px] relative">
                     <a href={item.link} target="_blank">
                       <Image
@@ -60,7 +58,11 @@ const ProjectSection = () => {
                   <div className="flex flex-col justify-between">
                     <CardHeader className="gap-4">
                       <CardTitle>
-                        <a href={item.link} target="_blank" className="hover:underline">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          className="hover:underline"
+                        >
                           {item.name}
                         </a>
                       </CardTitle>

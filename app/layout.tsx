@@ -22,9 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/images/logo-gold.png" />
       </head>
-      <body
-        className={`${robotoMono.className} dark:bg-slate-900 bg-slate-50`}
-      >
+      <body className={`${robotoMono.className}`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <NavBar />
           {children}
