@@ -15,7 +15,7 @@ const SkillLevels = ({ label, value, icon }: SkillLevelsProps) => {
         {icon}
         {label}
       </Label>
-      <Progress value={value} className="w-2/3 h-2 max-md:w-full" />
+      <Progress value={value} className="w-3/5 h-2 max-md:w-full" />
     </div>
   );
 };
