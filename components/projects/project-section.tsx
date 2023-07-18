@@ -55,7 +55,7 @@ const ProjectSection = () => {
                       />
                     </a>
                   </CardContent>
-                  <div className="flex flex-col justify-between">
+                  <div className="flex flex-col max-sm:justify-between mr-auto">
                     <CardHeader className="gap-4">
                       <CardTitle>
                         <a

@@ -165,6 +165,24 @@ export const projects = [
     link: "https://space-tourism-xsova113.vercel.app/",
   },
   {
+    name: "Manage Landing Page",
+    description:
+      "Landing page personal project.",
+    image: "/images/manage-landing-page.png",
+    github: "https://github.com/xsova113/manage-landing-page",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "tailwind",
+        color: "blue",
+      },
+    ],
+    link: "https://manage-landing-page-xsova113.vercel.app/",
+  },
+  {
     name: "Loopstudio Landing Page",
     description:
       "A smoothly animated and fully mobile responsive landing page.",
