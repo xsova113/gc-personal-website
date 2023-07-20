@@ -8,11 +8,19 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./ui/mode-toggle";
 import { motion } from "framer-motion";
+import { Weather } from "@/lib/types";
+import getWeather from "@/hooks/getWeather";
 
 const NavBar = () => {
   const mode = useTheme();
   const [isMounted, setIsMounted] = useState(false);
   const [show, setShow] = useState(false);
+  const [weather, setWeather] = useState<Weather>();
+  const location = "Richmond,BC,Canada";
+
+  useEffect(() => {
+    getWeather().then((data) => setWeather(data));
+  }, []);
 
   useEffect(() => {
     setIsMounted(true);
@@ -81,6 +89,21 @@ const NavBar = () => {
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
         <div className="flex items-center">
           <MobileNavItem />
+          <div className="flex items-center mr-2">
+            <span>
+              Vancouver Weather:&nbsp;
+              <span className="text-yellow-500">
+                {weather?.locations?.[location].currentConditions.temp}°C
+              </span>
+            </span>
+            &nbsp;
+            <Image
+              src={`/weather/${weather?.locations?.[location].currentConditions.icon}.png`}
+              alt={"weather icon"}
+              width={25}
+              height={25}
+            />
+          </div>
           <ModeToggle />
         </div>
       </motion.nav>
