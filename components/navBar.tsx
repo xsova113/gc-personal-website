@@ -20,15 +20,21 @@ const NavBar = () => {
   const [location, setLocation] = useState("");
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getLocation({ setLocation, setLat, setLon });
     if (lat.length > 1 && lon.length > 1) {
-      getWeather(lat, lon).then((data) => setWeather(data));
+      getWeather(lat, lon)
+        .then((data) => {
+          setLoading(true);
+          setWeather(data);
+        })
+        .finally(() => setLoading(false));
     } else {
       console.log("no location available");
     }
-  }, [location]);
+  }, [location, lat, lon]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -96,20 +102,25 @@ const NavBar = () => {
         </Link>
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
         <div className="flex items-center">
-          <div className="hidden md:flex items-center md:mr-2">
-            <span>
-              {location}:&nbsp;
-              <span className="text-yellow-500">{weather?.main.temp}°C</span>
-            </span>
-            &nbsp;
-            <div className="relative w-8 h-8 bg-slate-300 dark:bg-slate-500 rounded-md p-1">
-              <Image
-                src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}
-                alt={"weather icon"}
-                fill
-              />
+          {loading ? (
+            <span className="loading loading-spinner text-warning mr-2" />
+          ) : (
+            <div className="hidden md:flex items-center md:mr-2">
+              <span>
+                {location}:&nbsp;
+                <span className="text-yellow-500">{weather?.main.temp}°C</span>
+              </span>
+              &nbsp;
+              <div className="relative w-8 h-8 bg-slate-300 dark:bg-slate-500 rounded-md p-1">
+                <Image
+                  src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}
+                  alt={"weather icon"}
+                  fill
+                />
+              </div>
             </div>
-          </div>
+          )}
+
           <MobileNavItem />
           <ModeToggle />
         </div>
