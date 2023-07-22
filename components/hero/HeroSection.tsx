@@ -31,7 +31,7 @@ const HeroSection = () => {
                 <span className="text-yellow-500">
                   <Typewriter
                     options={{
-                      strings: ["Web Developer", "Programmer", "Coder"],
+                      strings: ["Web Developer.", "Programmer.", "Coder."],
                       autoStart: true,
                       loop: true,
                     }}
