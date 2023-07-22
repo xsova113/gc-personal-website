@@ -1,24 +1,17 @@
 import axios from "axios";
 
-const options = {
-  method: "GET",
-  url: "https://visual-crossing-weather.p.rapidapi.com/forecast",
-  params: {
-    aggregateHours: "24",
-    location: "Richmond,BC,Canada",
-    contentType: "json",
-    unitGroup: "metric",
-    shortColumnNames: "0",
-  },
-  headers: {
-    "X-RapidAPI-Key": "7c9a873c78msh985b21020dd268ap101d58jsn856fac66b1ec",
-    "X-RapidAPI-Host": "visual-crossing-weather.p.rapidapi.com",
-  },
-};
-
-const getWeather = async () => {
+const getWeather = async (lat: string, lon: string) => {
   try {
-    const response = await axios.request(options);
+    const response = await axios.request({
+      method: "GET",
+      url: "https://api.openweathermap.org/data/2.5/weather",
+      params: {
+        lat,
+        lon,
+        units: "metric",
+        appid: process.env.NEXT_PUBLIC_API_KEY,
+      },
+    });
     return response.data;
   } catch (error) {
     console.error(error);

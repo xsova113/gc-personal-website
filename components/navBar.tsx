@@ -8,19 +8,27 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./ui/mode-toggle";
 import { motion } from "framer-motion";
-import { Weather } from "@/lib/types";
+import { WeatherType } from "@/lib/types";
 import getWeather from "@/hooks/getWeather";
+import { getLocation } from "@/lib/utils";
 
 const NavBar = () => {
   const mode = useTheme();
   const [isMounted, setIsMounted] = useState(false);
   const [show, setShow] = useState(false);
-  const [weather, setWeather] = useState<Weather>();
-  const location = "Richmond,BC,Canada";
+  const [weather, setWeather] = useState<WeatherType>();
+  const [location, setLocation] = useState("");
+  const [lat, setLat] = useState("");
+  const [lon, setLon] = useState("");
 
   useEffect(() => {
-    getWeather().then((data) => setWeather(data));
-  }, []);
+    getLocation({ setLocation, setLat, setLon });
+    if (lat.length > 1 && lon.length > 1) {
+      getWeather(lat, lon).then((data) => setWeather(data));
+    } else {
+      console.log("no location available");
+    }
+  }, [location]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -28,7 +36,7 @@ const NavBar = () => {
     let previousScrollPosition = 0;
     let currentScrollPosition = 0;
 
-    window.addEventListener("scroll", function (e) {
+    window.addEventListener("scroll", function () {
       // Get the new Value
       currentScrollPosition = window.scrollY;
 
@@ -88,22 +96,21 @@ const NavBar = () => {
         </Link>
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
         <div className="flex items-center">
-          <MobileNavItem />
-          <div className="flex items-center mr-2">
+          <div className="hidden md:flex items-center md:mr-2">
             <span>
-              Vancouver Weather:&nbsp;
-              <span className="text-yellow-500">
-                {weather?.locations?.[location].currentConditions.temp}°C
-              </span>
+              {location}:&nbsp;
+              <span className="text-yellow-500">{weather?.main.temp}°C</span>
             </span>
             &nbsp;
-            <Image
-              src={`/weather/${weather?.locations?.[location].currentConditions.icon}.png`}
-              alt={"weather icon"}
-              width={25}
-              height={25}
-            />
+            <div className="relative w-8 h-8 bg-slate-300 dark:bg-slate-500 rounded-md p-1">
+              <Image
+                src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}
+                alt={"weather icon"}
+                fill
+              />
+            </div>
           </div>
+          <MobileNavItem />
           <ModeToggle />
         </div>
       </motion.nav>
