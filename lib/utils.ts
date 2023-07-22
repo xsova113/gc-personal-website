@@ -22,7 +22,7 @@ export const getLocation = ({
       (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        Geocode.setApiKey(process.env.NEXT_PUBLIC_SECRET_KEY!);
+        Geocode.setApiKey(process.env.NEXT_PUBLIC_GEOCODING_KEY!);
         Geocode.setLanguage("en");
         Geocode.fromLatLng(latitude.toString(), longitude.toString()).then(
           (response) => {
