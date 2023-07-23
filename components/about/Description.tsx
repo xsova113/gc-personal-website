@@ -1,4 +1,4 @@
-import { fadeIn} from "@/lib/motion";
+import { fadeIn } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -21,12 +21,13 @@ const Description = () => {
         that are not only visually stunning but also user-friendly and
         accessible to everyone. <br />
         <br />I believe that a website should be a reflection of a{" "}
-        <span className="text-yellow-500">brand&nbsp;s personality</span>, values,
-        and goals, and I strive to achieve that in every project I undertake.
+        <span className="text-yellow-500">brand&nbsp;s personality</span>,
+        values, and goals, and I strive to achieve that in every project I
+        undertake.
         <br />
-        <br /> Whether you&nbsp;re a small business owner looking to establish an
-        online presence or a large corporation seeking to revamp your website, I
-        am confident that I have the{" "}
+        <br /> Whether you&nbsp;re a small business owner looking to establish
+        an online presence or a large corporation seeking to revamp your
+        website, I am confident that I have the{" "}
         <span className="text-yellow-500">skills and creativity</span> to
         deliver a solution that exceeds your expectations.
       </motion.p>
@@ -35,13 +36,12 @@ const Description = () => {
         whileInView={"show"}
         initial="hidden"
       >
-        <div className="relative w-[80%] h-80 max-md:mx-auto rounded-lg shadow-xl border border-transparent overflow-hidden">
+        <div className="relative w-[80%] h-80 max-md:mx-auto rounded-lg overflow-hidden drop-shadow-xl border border-yellow-500">
           <Image
             src={"/images/profilepic.jpg"}
             alt={"avatar"}
             fill
-            className="object-cover rounded transition hover:scale-[101%]"
-            sizes={"100"}
+            className="object-cover rounded transition hover:scale-[105%]"
           />
         </div>
       </motion.div>
