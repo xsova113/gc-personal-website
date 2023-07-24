@@ -8,8 +8,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <Container className="dark:bg-black bg-white mt-0 pt-20">
+    <footer className="dark:bg-black bg-white min-w-screen">
+      <Container className="mt-0 pt-20">
         <Separator />
         <div className="flex sm:flex-row flex-col max-sm:items-center max-sm:gap-y-4 py-8">
           <span className="flex-1 text-sm text-muted-foreground">
