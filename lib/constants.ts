@@ -98,7 +98,7 @@ export const projects = [
         color: "blue",
       },
       {
-        name: "framer-motion",
+        name: "Stripe",
         color: "violet",
       },
       {
