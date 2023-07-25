@@ -83,6 +83,32 @@ export const projects = [
     link: "https://ecommerce-store-xsova113.vercel.app/",
   },
   {
+    name: "AI Generator",
+    description:
+      "An AI generation platform using OpenAI API and Replicate-AI API. Landing page and stripe payment included",
+    image: "/images/ai-saas.png",
+    github: "https://github.com/xsova113/ai-saas-genius",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "tailwind",
+        color: "blue",
+      },
+      {
+        name: "framer-motion",
+        color: "violet",
+      },
+      {
+        name: "next",
+        color: "orange",
+      },
+    ],
+    link: "https://genius-xsova113.vercel.app/",
+  },
+  {
     name: "Metaverse Madness",
     description:
       "Beaufitul and animated design of the metaverse web page that immerse the user into a metaversus experience.",
@@ -166,8 +192,7 @@ export const projects = [
   },
   {
     name: "Manage Landing Page",
-    description:
-      "Landing page personal project.",
+    description: "Landing page personal project.",
     image: "/images/manage-landing-page.png",
     github: "https://github.com/xsova113/manage-landing-page",
     tags: [

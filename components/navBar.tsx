@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { WeatherType } from "@/lib/types";
 import getWeather from "@/hooks/getWeather";
 import { getLocation } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const NavBar = () => {
   const mode = useTheme();
@@ -103,7 +104,7 @@ const NavBar = () => {
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
         <div className="flex items-center">
           {loading ? (
-            <span className="loading loading-spinner text-warning mr-2" />
+            <Skeleton className="w-[200px] h-[20px] rounded-full" />
           ) : (
             <div className="hidden md:flex items-center md:mr-2">
               <span>
