@@ -5,13 +5,14 @@ import { Link } from "react-scroll";
 import DeskTopNavItem from "./desktop-navItem";
 import MobileNavItem from "./mobile-navItem";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ModeToggle } from "./ui/mode-toggle";
 import { motion } from "framer-motion";
 import { WeatherType } from "@/lib/types";
 import getWeather from "@/hooks/getWeather";
 import { getLocation } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import Loading from "@/app/(routes)/loading";
 
 const NavBar = () => {
   const mode = useTheme();
@@ -103,9 +104,7 @@ const NavBar = () => {
         </Link>
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
         <div className="flex items-center">
-          {loading ? (
-            <Skeleton className="w-[200px] h-[20px] rounded-full" />
-          ) : (
+          <Suspense fallback={<Loading />}>
             <div className="hidden md:flex items-center md:mr-2">
               <span>
                 {location}:&nbsp;
@@ -114,13 +113,16 @@ const NavBar = () => {
               &nbsp;
               <div className="relative w-8 h-8 bg-slate-300 dark:bg-slate-500 rounded-md p-1">
                 <Image
-                  src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}
+                  src={
+                    `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png` ||
+                    "/next.svg"
+                  }
                   alt={"weather icon"}
                   fill
                 />
               </div>
             </div>
-          )}
+          </Suspense>
 
           <MobileNavItem />
           <ModeToggle />
