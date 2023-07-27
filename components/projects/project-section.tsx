@@ -37,9 +37,11 @@ const ProjectSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.slice(0, number).map((item) => {
               return (
-                <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
+                <Tilt
+                  key={item.link}
+                  options={{ max: 45, scale: 1, speed: 450 }}
+                >
                   <motion.div
-                    key={item.link}
                     initial="hidden"
                     variants={cardVariants}
                     whileInView={"show"}
