@@ -40,7 +40,7 @@ const HeroSection = () => {
               </p>
             </motion.h2>
             <p className="md:w-3/5 w-full text-muted-foreground pt-8">
-              I&nbsp;m a{" "}
+              I&lsquo;m a{" "}
               <span className="text-yellow-500">software enginner</span>{" "}
               specializing in building beautiful and functional websites (and
               occasionally mobile applications) with the focus of optimal user
