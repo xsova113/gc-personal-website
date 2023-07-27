@@ -40,7 +40,8 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.20.1",
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
     "@types/react-geocode": "^0.2.1",

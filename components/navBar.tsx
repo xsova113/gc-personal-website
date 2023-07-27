@@ -11,56 +11,29 @@ import { motion } from "framer-motion";
 import { WeatherType } from "@/lib/types";
 import getWeather from "@/hooks/getWeather";
 import { getLocation } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
 import Loading from "@/app/(routes)/loading";
+import { useScroll } from "@/hooks/useScroll";
+import { useScrollStore } from "@/hooks/useScrollStore";
 
 const NavBar = () => {
   const mode = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-  const [show, setShow] = useState(false);
   const [weather, setWeather] = useState<WeatherType>();
   const [location, setLocation] = useState("");
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
-  const [loading, setLoading] = useState(false);
+  const show = useScroll();
+  const setShow = useScrollStore((state) => state.setShow);
 
   useEffect(() => {
     getLocation({ setLocation, setLat, setLon });
     if (lat.length > 1 && lon.length > 1) {
-      getWeather(lat, lon)
-        .then((data) => {
-          setLoading(true);
-          setWeather(data);
-        })
-        .finally(() => setLoading(false));
+      getWeather(lat, lon).then((data) => {
+        setWeather(data);
+      });
     } else {
       console.log("no location available");
     }
   }, [location, lat, lon]);
-
-  useEffect(() => {
-    setIsMounted(true);
-
-    let previousScrollPosition = 0;
-    let currentScrollPosition = 0;
-
-    window.addEventListener("scroll", function () {
-      // Get the new Value
-      currentScrollPosition = window.scrollY;
-
-      //Subtract the two and conclude
-      if (previousScrollPosition - currentScrollPosition < 0) {
-        setShow(false);
-      } else if (previousScrollPosition - currentScrollPosition > 0) {
-        setShow(true);
-      }
-
-      // Update the previous value
-      previousScrollPosition = currentScrollPosition;
-    });
-  }, []);
-
-  if (!isMounted) return null;
 
   return (
     <header>
