@@ -30,7 +30,7 @@ export const projects = [
         color: "orange",
       },
       {
-        name: "headless-ui",
+        name: "shadcn-ui",
         color: "blue",
       },
       {
@@ -39,6 +39,40 @@ export const projects = [
       },
     ],
     link: "https://ecommerce-admin-xsova113.vercel.app/",
+  },
+  {
+    name: "Gym Website",
+    description:
+      "Gym website integrating with stripe subscription payment and clerk user auth.",
+    image: "/images/gymrats4.png",
+    github: "https://github.com/xsova113/gymrats",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "next",
+        color: "orange",
+      },
+      {
+        name: "shadcn-ui",
+        color: "blue",
+      },
+      {
+        name: "tailwind",
+        color: "violet",
+      },
+      {
+        name: "prisma",
+        color: "red",
+      },
+      {
+        name: "stripe",
+        color: "purple",
+      },
+    ],
+    link: "https://gymrats.vercel.app/",
   },
   {
     name: "Ecommerce-Store 1",

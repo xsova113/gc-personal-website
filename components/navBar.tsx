@@ -37,7 +37,7 @@ const NavBar = () => {
     <header>
       <motion.nav
         id="home"
-        className={`flex items-center fixed w-full shadow-sm px-4 md:px-8 z-50 justify-between py-2 md:w-full ${
+        className={`flex items-center fixed w-full shadow-sm px-4 md:px-8 z-50 justify-between py-2 ${
           show ? "translate-y-0" : "-translate-y-full"
         } transition duration-500 backdrop-blur`}
         onViewportEnter={() => setShow(true)}
