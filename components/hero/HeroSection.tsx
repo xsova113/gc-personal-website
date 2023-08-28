@@ -19,10 +19,10 @@ const HeroSection = () => {
         >
           <div className="space-y-5">
             <span className="text-yellow-500">Hi, my name is</span>
-            <h1 className="text-4xl md:text-6xl font-bold">George Chang.</h1>
+            <h1 className="text-3xl md:text-6xl font-bold">George Chang.</h1>
             <motion.h2
               variants={textContainer}
-              className="text-4xl md:text-6xl font-bold text-muted-foreground"
+              className="text-2xl md:text-6xl font-bold text-muted-foreground"
               initial={"hidden"}
               whileInView={"show"}
             >
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 </span>
               </p>
             </motion.h2>
-            <p className="md:w-3/5 w-full text-muted-foreground pt-8">
+            <p className="md:w-3/5 w-full text-muted-foreground pt-8 max-sm:text-sm">
               I&lsquo;m a{" "}
               <span className="text-yellow-500">software enginner</span>{" "}
               specializing in building beautiful and functional websites (and
