@@ -17,21 +17,21 @@ import ThemeToggle from "@/components/ThemeToggle";
 const NavBar = () => {
   const [weather, setWeather] = useState<WeatherType>();
   const [location, setLocation] = useState("");
-  const [lat, setLat] = useState("");
-  const [lon, setLon] = useState("");
+  // const [lat, setLat] = useState("");
+  // const [lon, setLon] = useState("");
   const show = useScroll();
   const setShow = useScrollStore((state) => state.setShow);
 
-  useEffect(() => {
-    getLocation({ setLocation, setLat, setLon });
-    if (lat.length > 1 && lon.length > 1) {
-      getWeather(lat, lon).then((data) => {
-        setWeather(data);
-      });
-    } else {
-      console.log("no location available");
-    }
-  }, [location, lat, lon]);
+  // useEffect(() => {
+  //   getLocation({ setLocation, setLat, setLon });
+  //   if (lat.length > 1 && lon.length > 1) {
+  //     getWeather(lat, lon).then((data) => {
+  //       setWeather(data);
+  //     });
+  //   } else {
+  //     console.log("no location available");
+  //   }
+  // }, [location, lat, lon]);
 
   return (
     <header>
@@ -44,8 +44,8 @@ const NavBar = () => {
       >
         <ThemeToggle />
         <DeskTopNavItem className="space-x-6 max-md:hidden" />
-        <div className="flex items-center">
-          <Suspense fallback={<Loading />}>
+        <div className="flex items-center gap-2">
+          {/* <Suspense fallback={<Loading />}>
             <div className="hidden md:flex items-center md:mr-2">
               <span>
                 {location}:&nbsp;
@@ -63,10 +63,9 @@ const NavBar = () => {
                 />
               </div>
             </div>
-          </Suspense>
-
-          <MobileNavItem />
+          </Suspense> */}
           <ModeToggle />
+          <MobileNavItem />
         </div>
       </motion.nav>
     </header>
