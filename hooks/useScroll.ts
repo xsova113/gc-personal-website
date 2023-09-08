@@ -23,7 +23,7 @@ export const useScroll = () => {
       // Update the previous value
       previousScrollPosition = currentScrollPosition;
     });
-  }, []);
+  }, [setShow]);
 
   return show;
 };

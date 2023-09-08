@@ -15,8 +15,8 @@ import { useScrollStore } from "@/hooks/useScrollStore";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const NavBar = () => {
-  const [weather, setWeather] = useState<WeatherType>();
-  const [location, setLocation] = useState("");
+  // const [weather, setWeather] = useState<WeatherType>();
+  // const [location, setLocation] = useState("");
   // const [lat, setLat] = useState("");
   // const [lon, setLon] = useState("");
   const show = useScroll();
