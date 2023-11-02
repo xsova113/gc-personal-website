@@ -47,7 +47,7 @@ const ProjectSection = () => {
                     whileInView={"show"}
                     viewport={{ once: true }}
                   >
-                    <Card className="drop-shadow-md dark:bg-slate-900 bg-white p-4 min-h-[450px]">
+                    <Card className="drop-shadow-md dark:bg-slate-900 bg-white p-4 min-h-[480px]">
                       <CardContent className="relative aspect-video w-full">
                         <a href={item.link} target="_blank">
                           <Image

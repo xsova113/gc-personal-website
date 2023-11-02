@@ -36,12 +36,12 @@ const Description = () => {
         whileInView={"show"}
         initial="hidden"
       >
-        <div className="relative w-[80%] h-80 max-md:mx-auto rounded-lg overflow-hidden drop-shadow-xl border border-yellow-500">
+        <div className="relative w-[80%] bg-yellow-500 h-80 max-md:mx-auto rounded-lg drop-shadow-xl border border-yellow-500">
           <Image
             src={"/images/profilepic.jpg"}
             alt={"avatar"}
             fill
-            className="object-cover rounded transition hover:scale-[105%]"
+            className="object-cover rounded transition-all hover:-translate-y-2 hover:-translate-x-2"
           />
         </div>
       </motion.div>

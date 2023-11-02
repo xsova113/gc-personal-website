@@ -26,10 +26,6 @@ export const projects = [
         color: "skyblue",
       },
       {
-        name: "vite",
-        color: "orange",
-      },
-      {
         name: "MUI",
         color: "blue",
       },
@@ -46,7 +42,41 @@ export const projects = [
         color: "green",
       },
     ],
-    link: "https://deluxe-hotel.vercel.app/",
+    link: "https://deluxe-hotel-production.up.railway.app/",
+  },
+  {
+    name: "Artist Casting Explorer",
+    description:
+      "Fullstack website for agents or individuals to discover artists and talents",
+    image: "/images/acePortfolio.png",
+    github: "https://github.com/xsova113/artistcastingexplorer",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "next",
+        color: "orange",
+      },
+      {
+        name: "postgreSQL",
+        color: "blue",
+      },
+      {
+        name: "tailwind",
+        color: "violet",
+      },
+      {
+        name: "stripe",
+        color: "pink",
+      },
+      {
+        name: "Wordpress-CMS",
+        color: "red",
+      },
+    ],
+    link: "https://www.artistcastingexplorer.com/",
   },
   {
     name: "CMS admin dashboard",
