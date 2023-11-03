@@ -21,7 +21,6 @@ const NavBar = () => {
   // const [lon, setLon] = useState("");
   const show = useScroll();
   const setShow = useScrollStore((state) => state.setShow);
-
   // useEffect(() => {
   //   getLocation({ setLocation, setLat, setLon });
   //   if (lat.length > 1 && lon.length > 1) {

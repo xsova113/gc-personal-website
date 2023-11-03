@@ -1,14 +1,13 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 const ThemeToggle = () => {
   const mode = useTheme();
   return (
     <Link
-      to="home"
+      href="/"
       className="relative w-16 h-16 hover:scale-125 transition cursor-pointer"
-      smooth
     >
       {mode.theme === "dark" ? (
         <Image
