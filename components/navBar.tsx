@@ -13,13 +13,14 @@ import Loading from "@/app/(routes)/loading";
 import { useScroll } from "@/hooks/useScroll";
 import { useScrollStore } from "@/hooks/useScrollStore";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useScrollTrigger } from "@/hooks/use-scroll-trigger";
 
 const NavBar = () => {
   // const [weather, setWeather] = useState<WeatherType>();
   // const [location, setLocation] = useState("");
   // const [lat, setLat] = useState("");
   // const [lon, setLon] = useState("");
-  const show = useScroll();
+  const show = useScrollTrigger();
   const setShow = useScrollStore((state) => state.setShow);
   // useEffect(() => {
   //   getLocation({ setLocation, setLat, setLon });
