@@ -47,7 +47,7 @@ export const projects = [
   {
     name: "Artist Casting Explorer",
     description:
-      "Fullstack website for agents or individuals to discover artists and talents",
+      "Fullstack website for agents or individuals to discover artists and talents with blog contents",
     image: "/images/acePortfolio.png",
     github: "https://github.com/xsova113/artistcastingexplorer",
     tags: [
@@ -72,7 +72,7 @@ export const projects = [
         color: "pink",
       },
       {
-        name: "Wordpress-CMS",
+        name: "sanity",
         color: "red",
       },
     ],
