@@ -49,6 +49,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "latest",
     "@types/react-geocode": "^0.2.1",
     "@types/react-scroll": "^1.8.7",
     "daisyui": "^3.2.1"
