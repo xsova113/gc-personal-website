@@ -25,7 +25,7 @@ const Description = () => {
         values, and goals, and I strive to achieve that in every project I
         undertake.
         <br />
-        <br /> Whether you&nbsp;re a small business owner looking to establish
+        <br /> Whether you&apos;re a small business owner looking to establish
         an online presence or a large corporation seeking to revamp your
         website, I am confident that I have the{" "}
         <span className="text-yellow-500">skills and creativity</span> to
@@ -41,7 +41,7 @@ const Description = () => {
             src={"/images/profilepic.jpg"}
             alt={"avatar"}
             fill
-            className="object-cover rounded transition-all hover:-translate-y-2 hover:-translate-x-2"
+            className="object-cover rounded-lg transition-all hover:-translate-y-2 hover:-translate-x-2"
           />
         </div>
       </motion.div>
