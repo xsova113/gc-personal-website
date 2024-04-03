@@ -67,7 +67,7 @@ const ContactForm = () => {
                   placeholder="NAME"
                   {...field}
                   disabled={isSubmitting}
-                  className="dark:bg-slate-900 bg-slate-100"
+                  className="dark:bg-slate-950 bg-slate-100"
                 />
               </FormControl>
               <FormMessage />
@@ -84,7 +84,7 @@ const ContactForm = () => {
                   placeholder="EMAIL"
                   {...field}
                   disabled={isSubmitting}
-                  className="dark:bg-slate-900 bg-slate-100"
+                  className="dark:bg-slate-950 bg-slate-100"
                 />
               </FormControl>
               <FormMessage />
@@ -101,7 +101,7 @@ const ContactForm = () => {
                   placeholder="MESSAGE"
                   {...field}
                   disabled={isSubmitting}
-                  className="dark:bg-slate-900 bg-slate-100"
+                  className="dark:bg-slate-950 bg-slate-100"
                   rows={5}
                 />
               </FormControl>

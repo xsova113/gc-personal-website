@@ -6,7 +6,7 @@ import Contact from "@/components/contact/Contact";
 
 const Page = () => {
   return (
-    <main className="flex flex-col overflow-x-clip dark:bg-neutral-900 bg-white">
+    <main className="flex flex-col overflow-x-clip dark:bg-slate-900 bg-white">
       <HeroSection />
       <AboutSection />
       <ProjectSection />
