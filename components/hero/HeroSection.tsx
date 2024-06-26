@@ -44,9 +44,9 @@ const HeroSection = () => {
               <p className="md:w-3/5 w-full text-muted-foreground pt-8 max-sm:text-sm">
                 I&lsquo;m a{" "}
                 <span className="text-yellow-500">software engineer</span>{" "}
-                specializing in building beautiful and functional websites (and
-                occasionally mobile applications) with the focus of optimal user
-                experience.
+                specializing in web and IOS development with the focus of
+                creating user-friendly and high-performance applications using
+                the latest technologies.
               </p>
             </div>
           </motion.div>

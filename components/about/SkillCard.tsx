@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "../ui/card";
 import SkillLevels from "./skill-levels";
 import {
+  Apple,
   Database,
   Figma,
   Smartphone,
@@ -16,25 +17,25 @@ interface SkillCardProps {
 const SkillCard = ({ isLoad, setIsLoad }: SkillCardProps) => {
   const [frontendProgress, setFrontendProgress] = React.useState(7);
   const [backendProgress, setBackendProgress] = React.useState(7);
-  const [webDesignProgress, setWebDesignProgress] = React.useState(7);
+  const [IOSProgress, setIOSProgress] = React.useState(7);
   const [mobileDevProgress, setMobileDevProgress] = React.useState(7);
 
   React.useEffect(() => {
     if (isLoad) {
       const frontendTimer = setTimeout(() => setFrontendProgress(92), 800);
       const backendTimer = setTimeout(() => setBackendProgress(72), 800);
-      const webDesignTimer = setTimeout(() => setWebDesignProgress(65), 800);
+      const IOSDevTimer = setTimeout(() => setIOSProgress(75), 800);
       const mobileDevTimer = setTimeout(() => setMobileDevProgress(72), 800);
       return () => {
         clearTimeout(frontendTimer);
         clearTimeout(backendTimer);
-        clearTimeout(webDesignTimer);
+        clearTimeout(IOSDevTimer);
         clearTimeout(mobileDevTimer);
       };
     } else if (isLoad === false) {
       const frontendTimer = setTimeout(() => setFrontendProgress(7), 800);
       const backendTimer = setTimeout(() => setBackendProgress(7), 800);
-      const webDesignTimer = setTimeout(() => setWebDesignProgress(7), 800);
+      const webDesignTimer = setTimeout(() => setIOSProgress(7), 800);
       const mobileDevTimer = setTimeout(() => setMobileDevProgress(7), 800);
       return () => {
         clearTimeout(frontendTimer);
@@ -59,9 +60,9 @@ const SkillCard = ({ isLoad, setIsLoad }: SkillCardProps) => {
           icon={<Database className="text-yellow-500 w-5" />}
         />
         <SkillLevels
-          label={"Web Design"}
-          value={webDesignProgress}
-          icon={<Figma className="text-yellow-500 w-5" />}
+          label={"IOS Development"}
+          value={IOSProgress}
+          icon={<Apple className="text-yellow-500 w-5" />}
         />
         <SkillLevels
           label={"React Native"}
