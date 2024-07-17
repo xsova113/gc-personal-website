@@ -21,7 +21,7 @@ const SKillBadges = () => {
         >
           <Badge
             key={index}
-            className="flex drop-shadow items-center gap-x-2 px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-md hover:scale-110 transition cursor-default hover:bg-slate-300 hover:dark:bg-slate-800"
+            className="flex drop-shadow items-center gap-x-2 px-2 py-1 bg-slate-200 dark:bg-slate-500 rounded-md hover:scale-110 transition cursor-default hover:bg-slate-300 hover:dark:bg-slate-600"
           >
             <Image src={item.img} alt="image" width={20} height={20} />
             <span className="text-muted-foreground text-xs dark:text-slate-100">

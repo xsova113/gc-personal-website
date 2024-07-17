@@ -255,6 +255,11 @@ export const skills = [
     color: "#9DB2BF",
   },
   {
+    skill: "Flutter",
+    img: "/skills/flutter.png",
+    color: "#9DB2BF",
+  },
+  {
     skill: "Prisma",
     img: "/skills/prisma.png",
     color: "#D2E9E9",
