@@ -160,25 +160,34 @@ export const projects = [
     link: "https://sneaker-ecom.vercel.app/",
   },
   {
-    name: "Ecommerce-Store 2",
-    description: "Fully mobile responsive single website for ecommerce store.",
-    image: "/images/ecom-storev2.png",
-    github: "https://github.com/xsova113/ecommerce-store",
+    name: "AI Content Generator",
+    description:
+      "AI generating tool that generate various type of content using OpenAI API.",
+    image: "/images/ai-gen2.png",
+    github: "https://github.com/xsova113/ai-content-generator",
     tags: [
-      {
-        name: "react",
-        color: "skyblue",
-      },
       {
         name: "tailwind",
         color: "blue",
       },
       {
+        name: "OpenAI",
+        color: "green",
+      },
+      {
+        name: "next-auth",
+        color: "teal",
+      },
+      {
         name: "next",
         color: "orange",
       },
+      {
+        name: "stripe",
+        color: "purple",
+      },
     ],
-    link: "https://ecommerce-store-xsova113.vercel.app/",
+    link: "https://ai-content-generator-production.up.railway.app",
   },
   {
     name: "AI Generator",
