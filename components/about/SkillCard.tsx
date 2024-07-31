@@ -65,7 +65,7 @@ const SkillCard = ({ isLoad, setIsLoad }: SkillCardProps) => {
           icon={<Apple className="text-yellow-500 w-5" />}
         />
         <SkillLevels
-          label={"React Native"}
+          label={"Flutter"}
           value={mobileDevProgress}
           icon={<Smartphone className="text-yellow-500 w-5" />}
         />
