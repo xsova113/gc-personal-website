@@ -15,34 +15,34 @@ export const navItems = [
 
 export const projects = [
   {
-    name: "Deluxe Resort Website",
+    name: "AI Content Generator",
     description:
-      "Fully functional full-stack hotel website for displaying information about the hotels and bookings.",
-    image: "/images/deluxe.png",
-    github: "https://github.com/xsova113/deluxe-hotel",
+      "AI generating tool that generate various type of content using OpenAI API.",
+    image: "/images/ai-gen2.png",
+    github: "https://github.com/xsova113/ai-content-generator",
     tags: [
       {
-        name: "react",
-        color: "skyblue",
-      },
-      {
-        name: "MUI",
+        name: "tailwind",
         color: "blue",
       },
       {
-        name: "Redux",
-        color: "violet",
-      },
-      {
-        name: "Express",
-        color: "red",
-      },
-      {
-        name: "Prisma",
+        name: "OpenAI",
         color: "green",
       },
+      {
+        name: "next-auth",
+        color: "teal",
+      },
+      {
+        name: "next",
+        color: "orange",
+      },
+      {
+        name: "stripe",
+        color: "purple",
+      },
     ],
-    link: "https://deluxe-hotel-production.up.railway.app/",
+    link: "https://ai-content-generator-liard.vercel.app",
   },
   {
     name: "Artist Casting Explorer",
@@ -79,32 +79,6 @@ export const projects = [
     link: "https://www.artistcastingexplorer.com/",
   },
   {
-    name: "CMS admin dashboard",
-    description:
-      "Fully functional admin dashboard CMS website for managing contents for ecommerce site.",
-    image: "/images/cms-dashboardv2.png",
-    github: "https://github.com/xsova113/ecommerce-admin",
-    tags: [
-      {
-        name: "react",
-        color: "skyblue",
-      },
-      {
-        name: "next",
-        color: "orange",
-      },
-      {
-        name: "shadcn-ui",
-        color: "blue",
-      },
-      {
-        name: "tailwind",
-        color: "violet",
-      },
-    ],
-    link: "https://ecommerce-admin-xsova113.vercel.app/",
-  },
-  {
     name: "Gym Website",
     description:
       "Gym website integrating with stripe subscription payment and clerk user auth.",
@@ -139,6 +113,64 @@ export const projects = [
     link: "https://gymrats.vercel.app/",
   },
   {
+    name: "Deluxe Resort Website",
+    description:
+      "Fully functional full-stack hotel website for displaying information about the hotels and bookings.",
+    image: "/images/deluxe.png",
+    github: "https://github.com/xsova113/deluxe-hotel",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "MUI",
+        color: "blue",
+      },
+      {
+        name: "Redux",
+        color: "violet",
+      },
+      {
+        name: "Express",
+        color: "red",
+      },
+      {
+        name: "Prisma",
+        color: "green",
+      },
+    ],
+    link: "https://deluxe-hotel-production.up.railway.app/",
+  },
+
+  {
+    name: "CMS admin dashboard",
+    description:
+      "Fully functional admin dashboard CMS website for managing contents for ecommerce site.",
+    image: "/images/cms-dashboardv2.png",
+    github: "https://github.com/xsova113/ecommerce-admin",
+    tags: [
+      {
+        name: "react",
+        color: "skyblue",
+      },
+      {
+        name: "next",
+        color: "orange",
+      },
+      {
+        name: "shadcn-ui",
+        color: "blue",
+      },
+      {
+        name: "tailwind",
+        color: "violet",
+      },
+    ],
+    link: "https://ecommerce-admin-xsova113.vercel.app/",
+  },
+
+  {
     name: "Ecommerce-Store 1",
     description: "Fully mobile responsive single website for ecommerce store.",
     image: "/images/sneaker-ecom-store.png",
@@ -158,36 +190,6 @@ export const projects = [
       },
     ],
     link: "https://sneaker-ecom.vercel.app/",
-  },
-  {
-    name: "AI Content Generator",
-    description:
-      "AI generating tool that generate various type of content using OpenAI API.",
-    image: "/images/ai-gen2.png",
-    github: "https://github.com/xsova113/ai-content-generator",
-    tags: [
-      {
-        name: "tailwind",
-        color: "blue",
-      },
-      {
-        name: "OpenAI",
-        color: "green",
-      },
-      {
-        name: "next-auth",
-        color: "teal",
-      },
-      {
-        name: "next",
-        color: "orange",
-      },
-      {
-        name: "stripe",
-        color: "purple",
-      },
-    ],
-    link: "https://ai-content-generator-production.up.railway.app",
   },
   {
     name: "AI Generator",
