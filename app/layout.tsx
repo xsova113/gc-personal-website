@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
-const robotoMono = Roboto_Mono({ subsets: ["latin"] });
+const robotoMono = Roboto_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "George Chang",

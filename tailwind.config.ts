@@ -1,6 +1,20 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+export function flattenColorPalette(
+  colors: Record<string, any>
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  for (const [color, value] of Object.entries(colors)) {
+    if (typeof value === "string") {
+      result[color] = value;
+    } else if (typeof value === "object" && value !== null) {
+      for (const [shade, hex] of Object.entries(value)) {
+        result[`${color}-${shade}`] = hex as string;
+      }
+    }
+  }
+  return result;
+}
+
+// import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -84,7 +98,7 @@ module.exports = {
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette.default(theme("colors"));
+  let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
