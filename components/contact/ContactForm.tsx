@@ -15,10 +15,10 @@ import { Textarea } from "../ui/textarea";
 import { motion } from "framer-motion";
 
 const formSchema = z.object({
-  name: z.string().nonempty({ message: "This field is required" }),
+  name: z.string().min(1, { message: "This field is required" }),
   email: z
     .string()
-    .nonempty({ message: "This field is required" })
+    .min(1, { message: "This field is required" })
     .regex(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, {
       message: "Invalid email address",
     }),
