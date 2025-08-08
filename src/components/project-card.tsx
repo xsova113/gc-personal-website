@@ -1,4 +1,4 @@
-import { Github, GithubIcon, LinkIcon } from "lucide-react";
+import { LinkIcon, Github, GithubIcon } from "lucide-react";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -62,7 +62,7 @@ export const ProjectCard = ({
               href={githubLink}
               className="dark:text-white"
             >
-              <Button size={"icon"} className="bg-yellow-500">
+              <Button asChild size={"icon"} className="bg-yellow-500">
                 <Link href={githubLink} target="_blank">
                   <Github />
                 </Link>

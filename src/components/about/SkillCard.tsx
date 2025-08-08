@@ -47,7 +47,7 @@ const SkillCard = ({ isLoad, setIsLoad }: SkillCardProps) => {
   }, [isLoad, setIsLoad]);
 
   return (
-    <Card className="mt-4 w-1/1 drop-shadow-lg dark:bg-slate-950 bg-slate-50">
+    <Card className="mt-4 w-1/1 drop-shadow-lg border-0 dark:bg-slate-950 bg-slate-50">
       <CardContent className="flex flex-col px-8 gap-6 pt-8 max-sm:pb-10">
         <SkillLevels
           label={"Frontend"}

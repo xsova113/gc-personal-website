@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import Geocode from "react-geocode";
+import { setKey, setLanguage, fromLatLng } from "react-geocode";
 
 interface GetLocationProps {
   setLocation: (value: string) => void;
@@ -22,9 +22,9 @@ export const getLocation = ({
       (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        Geocode.setApiKey(process.env.NEXT_PUBLIC_GEOCODING_KEY!);
-        Geocode.setLanguage("en");
-        Geocode.fromLatLng(latitude.toString(), longitude.toString()).then(
+        setKey(process.env.NEXT_PUBLIC_GEOCODING_KEY!);
+        setLanguage("en");
+        fromLatLng(latitude, longitude).then(
           (response) => {
             let city, country;
             for (

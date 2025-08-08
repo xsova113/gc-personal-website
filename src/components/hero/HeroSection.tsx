@@ -28,7 +28,7 @@ const HeroSection = () => {
                 initial={"hidden"}
                 whileInView={"show"}
               >
-                <p className="flex">
+                <div className="flex">
                   I am a&nbsp;
                   <span className="text-yellow-500">
                     <Typewriter
@@ -39,7 +39,7 @@ const HeroSection = () => {
                       }}
                     />
                   </span>
-                </p>
+                </div>
               </motion.h2>
               <p className="md:w-3/5 w-full text-muted-foreground pt-8 max-sm:text-sm">
                 I&lsquo;m a{" "}
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </div>
           </motion.div>
           <motion.div
-            variants={slideIn("left", "spring", 0.8, 1.5)}
+            animate={slideIn("left", "spring", 0.8, 1.5)}
             initial="hidden"
             whileInView={"show"}
             className="flex items-center mt-16 gap-8"

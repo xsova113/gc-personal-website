@@ -1,9 +1,9 @@
-import { skills } from "@/lib/constants";
-import { textContainer, textVariant2 } from "@/lib/motion";
+import { textContainer, textVariant2 } from "../../lib/motion";
 import { motion } from "framer-motion";
 import React from "react";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
+import { skills } from "../../lib/constants";
 
 const SKillBadges = () => {
   return (

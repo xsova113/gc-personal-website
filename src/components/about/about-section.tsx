@@ -14,7 +14,7 @@ const AboutSection = () => {
       <Container className="md:mt-52 mt-32 flex flex-col">
         <div className={"flex flex-col gap-y-10"}>
           <motion.div
-            variants={slideIn("left", "spring", 0.2, 1.5)}
+            animate={slideIn("left", "spring", 0.2, 1.5)}
             initial="hidden"
             whileInView={"show"}
           >

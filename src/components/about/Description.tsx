@@ -1,7 +1,7 @@
-import { fadeIn } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { fadeIn } from "../../lib/motion";
 
 const Description = () => {
   return (
@@ -32,7 +32,7 @@ const Description = () => {
         deliver a solution that exceeds your expectations.
       </motion.p>
       <motion.div
-        variants={fadeIn("left", "easeIn", 0.5, 0.5)}
+        animate={fadeIn("left", "easeIn", 0.5, 0.5)}
         whileInView={"show"}
         initial="hidden"
       >

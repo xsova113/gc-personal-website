@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Crosshair } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { motion } from "framer-motion";
-import { navVariants } from "@/lib/motion";
 import SKillBadges from "./SKillBadges";
 import SkillCard from "./SkillCard";
+import { navVariants } from "@/lib/motion";
 
 const SkillsSection = () => {
   const [isLoad, setIsLoad] = useState(false);
